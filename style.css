@@ -1,0 +1,135 @@
+:root {
+  font-family: "Karla";
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --cyan: hsl(179, 62%, 43%);
+  --light-cyan: hsl(179, 56%, 59%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsla(203, 44%, 93%, 0.852);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --white: hsl(180, 100%, 100%);
+}
+body {
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-gray);
+}
+main {
+  max-width: 25rem;
+  box-shadow: 0 0 1rem var(--grayish-blue);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+main > * {
+  padding: 1rem 2rem;
+}
+.description {
+  background-color: white;
+  color: var(--grayish-blue);
+  border-radius: 1rem 1rem 0 0;
+}
+.description h1 {
+  color: var(--cyan);
+}
+.description h2 {
+  color: var(--bright-yellow);
+}
+h2 {
+  font-size: 1.2rem;
+}
+.subscription {
+  background-color: var(--cyan);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.price {
+  color: var(--light-gray);
+  margin: 0;
+}
+.price span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+}
+button {
+  min-width: 80%;
+  padding: 1rem 0;
+  background-color: var(--bright-yellow);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.7rem 1rem hsla(179, 64%, 27%, 0.449);
+  transition: 0.5s;
+}
+button:hover {
+  background-color: var(--white);
+  color: var(--bright-yellow);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.perks {
+  background-color: var(--light-cyan);
+  border-radius: 0 0 1rem 1rem;
+  color: var(--white);
+}
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+  color: var(--light-gray);
+}
+ul li {
+  transition: 0.5s;
+}
+ul li:hover {
+  color: var(--white);
+  font-weight: 700;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--bright-yellow);
+  transition: 0.5s;
+}
+.attribution a {
+  color: var(--cyan);
+}
+.attribution:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+@media screen and (min-width: 800px) {
+  body {
+    height: 90vh;
+    justify-content: center;
+  }
+  main {
+    min-width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .description {
+    grid-column: 1/3;
+  }
+  .subscription {
+    border-radius: 0 0 0 0.5rem;
+  }
+  .perks {
+    border-radius: 0 0 0.5rem 0;
+  }
+}
